@@ -10,6 +10,8 @@ abstract class Animal {
 
     public abstract String move();
 
+    public abstract String move(int m);
+
     public abstract boolean isAlive();
 
     public abstract String printData();
@@ -37,6 +39,11 @@ class Dog extends Animal {
     @Override
     public String move() {
         return "The Dog name " + name + " walking for 3m";
+    }
+
+    @Override
+    public String move(int m) {
+        return "The Dog name " + name + " walking for" + m +"m";
     }
 
     @Override
@@ -79,7 +86,12 @@ class Cat extends Animal {
 
     @Override
     public String move() {
-        return "The Cat name " + name + " is walking 5 m";
+        return "The Cat name " + name + " is walking 5";
+    }
+
+    @Override
+    public String move(int m) {
+        return "The Cat name " + name + " is walking " + m + "m";
     }
 
     @Override
@@ -126,6 +138,11 @@ class Duck extends Animal {
     }
 
     @Override
+    public String move(int m) {
+        return "The Duck name is " + name + " swims for " + m + "m";
+    }
+
+    @Override
     public boolean isAlive() {
         if (super.alive == alive.ALIVE) {
             return true;
@@ -166,6 +183,11 @@ class Horse extends Animal {
     @Override
     public String move() {
         return "The Horse name is " + name + " run for 100m";
+    }
+
+    @Override
+    public String move(int m) {
+        return "The Horse name is " + name + " run for "+ m +"m";
     }
 
     @Override
